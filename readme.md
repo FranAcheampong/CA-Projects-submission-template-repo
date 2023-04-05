@@ -9,6 +9,26 @@ India has one of the fastest expanding economies in the world. Startups may be s
 ## Project Description
 This project aims to provide insights into the Indian start-up ecosystem, including its current state, trends, and potential opportunities for growth. To achieve this, we will be analyzing key metrics in funding received by startups in India from 2018 to 2021. Through data analysis and visualization, we aim to identify key areas of focus for our team to enter the market and make a significant impact.
 
+# Project Title
+Understanding the Indian Start-up Ecosystem: Analysis and Recommendations
+
+# Question
+1. Which type of start-up location gets the most funding?
+2. At which stage do start-ups get more funding from investors?
+3. Which type of investors invest the most money?
+4. Which type of investors invested the least money?
+5. What is the percentage of Technology and Non-Technology in the Indian Start-up?
+
+# Hypothesis
+The method of hypothesis testing involves performing statistical tests on a sample to generate inferences or conclusions about the whole dataset.
+
+To further analyze the data, we developed the null and alternate hypothesis to focus on two groups; Technology-biased startups and non-tech biased startups. So the two hypothesis are as follows;
+
+NULL: Mumbai is the primary hub for startups in Indian
+
+
+ALTERNATE: Mumbai is not the primary hub for starts in Indian
+
 ## Setup
 # Data handling
 import numpy as np 
@@ -63,21 +83,23 @@ startup2018['Funding Year']= "2018"
 # Changing the founding year into integer
 startup2018['Funding Year'] =startup2018['Funding Year'].astype(int)
 
-# Taking  a deep look at the dataset across the years, certain columns were common in all the datasets and were deemed important in the analysis. so in importing the datasets, specific columns were imported. These included Company Name, Industry, Round/Series, Amount and Location
+Taking  a deep look at the dataset across the years, certain columns were common in all the datasets and were deemed important in the analysis. so in importing the datasets, specific columns were imported. These included Company Name, Industry, Round/Series, Amount and Location
 
 
-# To ensure consistency, some columns were renamed to match the columns in the dataset of subsequent years. Industry was renamed to Sector and Round/Series to Stage
+To ensure consistency, some columns were renamed to match the columns in the dataset of subsequent years. Industry was renamed to Sector and Round/Series to Stage
 
 
-# A new column named Funding Year was also added to each dataset and all rows were assigned the value 2018, depending on the dataset. 
+A new column named Funding Year was also added to each dataset and all rows were assigned the value 2018, depending on the dataset. 
 
 
-# With the exception of 2018, all the other datasets had other relevant columns such as the year the startup was founded as well as the investor that provided funding. these columns were imported because there was a need to understand if the number of years that a startup had been
+With the exception of 2018, all the other datasets had other relevant columns such as the year the startup was founded as well as the investor that provided funding. these columns were imported because there was a need to understand if the number of years that a startup had been
+
 # DATA CLEANING 
 The data cleaning phase follows the following trends
 
-# Univariate Analysis
+Univariate Analysis
 cleaning the Location clumns
+
 # Maintaining only the first city 
 startup2018['Location']=startup2018.Location.str.split(',').str[0]
 startup2018['Location'].head()
@@ -97,7 +119,7 @@ startup2018.dropna(subset=['Amount($)'], inplace=True)
 
 We realizing that the amount column is in object data type we needed to change to numeric datatype
 
-# getting the index all rows in the column amount that has rupees
+# Getting the index all rows in the column amount that has rupees
 get_index=startup2018.index[startup2018['Amount($)'].str.contains('₹')]
 
 # charging the rows in rupees to dollars using standard rate 
@@ -233,10 +255,11 @@ data_final['Location'].unique()
 missing_percentage=data_final.isna().mean()*100
 missing_percentage
 
-## At the data preparation stage, we inspect the datasets in full, present it, test our hypotheses and rethink the cleaning, and creating new  features that will help us answer our question asked in the begining. 
+# At the data preparation stage, we inspect the datasets in full, present it, test our hypotheses and rethink the cleaning, and creating new  features that will help us answer our question asked in the begining. 
 
-# Dataset overview
-# We inspected our final dataset using the following methods: .head(), .info(), .tail(), .shape()
+Dataset overview
+
+We inspected our final dataset using the following methods: .head(), .info(), .tail(), .shape()
 
 index_ = data_final.index[data_final['Investor']=='Undisclosed']
 index_
@@ -370,7 +393,7 @@ plt.show()
 image.png
 
 
-# From the visual above we can say that Bangalore recieved the most funding followed by Mumbai which had less than half of Bangalore's value. It can also be said that the bottom three startups that recieved the least amount are Delhi, Hyderbad and Gurgaon respectively
+From the visual above we can say that Bangalore recieved the most funding followed by Mumbai which had less than half of Bangalore's value. It can also be said that the bottom three startups that recieved the least amount are Delhi, Hyderbad and Gurgaon respectively
 
 # QUESTION 2: At which stage do start-ups get more funding from investors?
 
@@ -399,7 +422,7 @@ plt.show()
 image.png
 
 
-# Bridge Round stage recieved the most funding, Series D had the least funding. It can be concluded that Bridge Round recieved more than twice the funds recieved by Seed stage and any other stages.
+Bridge Round stage recieved the most funding, Series D had the least funding. It can be concluded that Bridge Round recieved more than twice the funds recieved by Seed stage and any other stages.
 
 # Question 3: Which type of investors invest the most money?
 
@@ -461,7 +484,7 @@ plt.show()
 
 [label](blob:vscode-webview%3A//1ojtcg0f9anrh3s8hprj7tj2regnjrfva6v5p9scugekiiqnvoa9/803debb9-ae3b-419f-8812-5d2ce84a2be9)
 
-# QUESTION 5: What is the percentage of Technology and Non-Technology in the Indian startups?
+QUESTION 5: What is the percentage of Technology and Non-Technology in the Indian startups?
 
 To answer this question we need to define and classify startups that belong to the group of technology and non technology
 
@@ -589,9 +612,6 @@ Infact Bangalore had twice more startups than what Mumbai had.
 We therefore rejected the NULL hyposthesis. This is beacause there is enough evidence to do so.
 
 Bangalore is the primary hub for startups in Indian.
-
-
-
 
 
 
