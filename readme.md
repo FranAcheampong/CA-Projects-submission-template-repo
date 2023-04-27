@@ -13,53 +13,6 @@ The Favorita Grocery Sales Forecasting dataset is a fascinating collection of da
 
 ## Setup
 
-
-from scipy import stats
-from scipy.stats import pearsonr
-
-from scipy.stats import chi2_contingency
-import plotly.express as px
-
-from scipy.stats import ttest_ind
-from datetime import datetime
-
-
-# Importing the relevant libraries
-import IPython.display
-import json
-import squarify
-%matplotlib inline
-import missingno as msno
-import plotly.offline as py
-py.init_notebook_mode(connected=True)
-import plotly.graph_objs as go
-import plotly.tools as tls
-color = sns.color_palette()
-
-# D3 modules
-from IPython.core.display import display, HTML, Javascript
-from string import Template
-
-# Other packages
-import os
-import re
-#display all columns and rows 
-pd.set_option('display.max_columns', None)
-pd.set_option('display.max_rows', None)
-from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import LabelEncoder
-
-from sklearn.model_selection import train_test_split
-from statsmodels.tsa.arima.model import ARIMA
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.linear_model import LinearRegression
-
-from sklearn.metrics import mean_squared_error, r2_score
-from sklearn.metrics import mean_squared_log_error
-
-import warnings
-warnings.filterwarnings('ignore')
-
 ## App Executio
 ...
 
