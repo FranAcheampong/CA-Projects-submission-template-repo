@@ -13,7 +13,7 @@ The Favorita Grocery Sales Forecasting dataset is a fascinating collection of da
 
 ## Setup
 
-## App Executio
+## App Execution
 ...
 
 ## Author
