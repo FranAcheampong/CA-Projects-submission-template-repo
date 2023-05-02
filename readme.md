@@ -4,7 +4,7 @@
 ## Summary
 | Code      | Name        | Published Article |  Deployed App |
 |-----------|-------------|:-------------:|------:|
-| LP2 | Store Sales -- Time Series Forecasting |  [Best article of the world](https://medium.com/@acheampongfrancis95/predictive-analytics-for-grocery-sales-forecasting-a-case-study-of-favorita-stores-b9c7e89549fe) | [Best app of the world](https://app.powerbi.com/groups/me/reports/edca594b-66bb-4578-b416-e93d01c74ddc/ReportSection) |
+| LP2 | Store Sales -- Time Series Forecasting |  [Read more here](https://medium.com/@acheampongfrancis95/predictive-analytics-for-grocery-sales-forecasting-a-case-study-of-favorita-stores-b9c7e89549fe) | [Check the visuals on PowerBi](https://app.powerbi.com/groups/me/reports/edca594b-66bb-4578-b416-e93d01c74ddc/ReportSection) |
 
 ## Project Description
 This is a time series forecasting problem. In this project, you will predict store sales on data from Corporation Favorita, a large Ecuadorian-based grocery retailer. 
